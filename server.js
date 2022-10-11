@@ -11,12 +11,8 @@ const port = 3000
 
  app.use(express.json())
 
-
- 
   const subscribersRoter = require('./routes/subscribers')
- 
+  
+  app.use('.subscribers',subscribersRoter)
 
-
-
-
- app.listen(port,()=> console.log(`Listening on port  ${port}`))
+  app.listen(port,()=> console.log(`Listening on port  ${port}`))
