@@ -3,4 +3,13 @@ const router = express.Router()
 
 module.exports = router
 
-router.post('/', (req, res) => ({  }));
+  router.get("/", function(req, res) {
+    res.send('hello world')
+})
+  router.get('/:id', (req, res) => {
+    res.send(req.params.id)
+  })
+
+// router.post('/', (req, res) => ({  }));
+
+// router.patch('/', (req, res) => ({  }));
